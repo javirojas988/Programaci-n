@@ -10,7 +10,7 @@ public class T5piramideHueca {
                 System.err.print(" ");
             }
             for (int j = 0; j < i*2-1  ; j++ ) {  // mientras q j sea menor printea hasta llegar a i que cada es mayor ,  2*-1 indica cuantas veces printeara
-                if (  i == 1 || i == altura || j == 0 || j == i*2-2 ) { // entonces si modifico el interior tengo q modificar i 
+                if (  i == 1 || i == altura || j == 0 || j == i*2-2 ) { // entonces si modifico el interior tengo q modificar i/ j es el sitio donde pone  asi q solo dejo 0 y fianl
                     System.err.print("x");
                 } else  {
                     System.err.print(" ");

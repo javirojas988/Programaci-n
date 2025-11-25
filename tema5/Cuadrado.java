@@ -3,7 +3,7 @@ package tema5;
 public class Cuadrado {
     public static void main(String[] args) {
         int altura ; 
-        altura = 2 ;
+        altura = 4 ;
         for (int i = 0; i <= altura ; i++) { // i 0 - 5 
 
             for (int y = altura ; y > i  ; y--) {  // y 5 - 0
