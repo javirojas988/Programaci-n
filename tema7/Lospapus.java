@@ -1,22 +1,135 @@
 package tema7;
+
+// longitud carretera 
+// anchura es la misma 4 relleno 2 borde
+// cada metro puede GIRAR IZQ , GIRAR DERECH , IR RECTO , 
+// probabilidad 50% de obstaculo , posicion aleatoria , 0 / * 
+
+// Switch cada cacho de acera con IZQ , DER , REC 
+// Math random en cada cacho 0/1 obstaculo 
+// Obstculo O / * , posicion 1/4
+
+import java.util.Scanner;
+
 public class Lospapus {
 
-    public static void piramide(int altura) {
+    
+    public static void Cacho(int obstaculo) {
+        int tipoObstucalo ; 
+        int posicionObstucalo;
+        int direccion;
+        direccion = (int) (Math.random() * (3 - 1 + 1) + 1); // Der Rec Izq
 
-        for (int i = 0; i <= altura; i++) {
-            for (int j = altura; j > i; j--) {
-                System.out.print(" ");
+        if (obstaculo == 1) {
+
+            //OBSTACULOS SI 
+
+            tipoObstucalo = (int) (Math.random() * (2 - 1 + 1) + 1);
+            posicionObstucalo = (int) (Math.random() * (4 - 1 + 1) + 1);
+
+            switch (direccion) {
+                case 1: // Der
+                    if (tipoObstucalo == 2 ){
+                        for ( int j = 0 ; j <= 7 ; j++){
+                            if ( j == 2 || j == 7 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo+2) {
+                                System.out.print("O");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    } else if ( tipoObstucalo == 1){
+                        for ( int j = 0 ; j <= 7 ; j++){
+                            if ( j == 2 || j == 7 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo+2) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    }
+                    break;
+                case 2: // Izq
+                    if (tipoObstucalo == 2 ){
+                        for ( int j = 0 ; j <= 5 ; j++){
+                            if ( j == 0 || j == 5 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo) {
+                                System.out.print("O");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    } else if ( tipoObstucalo == 1){
+                        for ( int j = 0 ; j <= 5 ; j++){
+                            if ( j == 0 || j == 5 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    }
+                    break;
+                case 3: // Cen
+                     if (tipoObstucalo == 2 ){
+                        for ( int j = 0 ; j <= 6 ; j++){
+                            if ( j == 1 || j == 6 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo) {
+                                System.out.print("O");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    } else if ( tipoObstucalo == 1){
+                        for ( int j = 0 ; j <= 6 ; j++){
+                            if ( j == 1 || j == 6 ){
+                                System.out.print("|");
+                            } else if ( j == posicionObstucalo) {
+                                System.out.print("*");
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                    }
+                    break;
             }
-            for (int j = 0; j < i * 2 - 1; j++) {
-                System.out.print("*");
+        } else {
+
+            //OBSTACULOS NO
+
+            switch (direccion) {
+                case 1: // Der
+                    System.out.print("  |    |");
+                    break;
+                case 2: // Izq
+                    System.out.print("|    | ");
+                    break;
+                case 3: // Cen
+                    System.out.print(" |    | ");
+                    break;
             }
-            System.out.println();
         }
     }
-
     public static void main(String[] args) {
-        System.out.println("introduzca altura ");
-        int altura = Integer.parseInt(System.console().readLine());
-        piramide(altura );
+        Scanner sc = new Scanner(System.in);
+        int obstucalo ; 
+        int longitud ; 
+
+        
+
+        System.out.print("Longitud carretera: ");
+        longitud = sc.nextInt();
+
+        for ( int i = 0 ; i < longitud ; i++ ){
+            obstucalo = (int) (Math.random() * (2 - 1 + 1) + 1);
+            Cacho(obstucalo);
+            System.out.println();
+            
+        }
     }
 }
