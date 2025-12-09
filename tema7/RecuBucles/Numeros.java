@@ -12,19 +12,21 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 2:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i > altura && j == 0) {
+                    } else if (i > altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i < altura && j == 2) {
+                    } else if (i < altura/2 && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 3:
@@ -36,6 +38,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
 
                 break;
@@ -43,39 +46,42 @@ public class Numeros {
                 for (int j = 0; j < 3; j++) {
                     if (i == altura / 2) {
                         System.out.print("X");
-                    } else if (i < altura && (j == 0 || j == 2)) {
+                    } else if (i < altura/2 && (j == 0 || j == 2)) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > (altura/2) && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 5:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i < altura && j == 0) {
+                    } else if (i < altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > altura/2 && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 6:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i < altura && j == 0) {
+                    } else if (i < altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i > altura && (j == 2 || j == 0)) {
+                    } else if (i > altura/2 && (j == 2 || j == 0)) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 7:
@@ -87,6 +93,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 8:
@@ -98,19 +105,21 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 9:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > altura/2 && j == 2) {
                         System.out.print("X");
-                    } else if (i < altura && (j == 2 || j == 0)) {
+                    } else if (i < altura/2 && (j == 2 || j == 0)) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 0:
@@ -122,6 +131,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
         }
@@ -136,19 +146,21 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 2:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i > altura && j == 0) {
+                    } else if (i > altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i < altura && j == 2) {
+                    } else if (i < altura/2 && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 3:
@@ -160,6 +172,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
 
                 break;
@@ -167,39 +180,42 @@ public class Numeros {
                 for (int j = 0; j < 3; j++) {
                     if (i == altura / 2) {
                         System.out.print("X");
-                    } else if (i < altura && (j == 0 || j == 2)) {
+                    } else if (i < altura/2 && (j == 0 || j == 2)) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > (altura/2) && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 5:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i < altura && j == 0) {
+                    } else if (i < altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > altura/2 && j == 2) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 6:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i < altura && j == 0) {
+                    } else if (i < altura/2 && j == 0) {
                         System.out.print("X");
-                    } else if (i > altura && (j == 2 || j == 0)) {
+                    } else if (i > altura/2 && (j == 2 || j == 0)) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 7:
@@ -211,6 +227,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 8:
@@ -222,19 +239,21 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 9:
                 for (int j = 0; j < 3; j++) {
                     if (i == 0 || i == altura / 2 || i == altura - 1) {
                         System.out.print("X");
-                    } else if (i > altura && j == 2) {
+                    } else if (i > altura/2 && j == 2) {
                         System.out.print("X");
-                    } else if (i < altura && (j == 2 || j == 0)) {
+                    } else if (i < altura/2 && (j == 2 || j == 0)) {
                         System.out.print("X");
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
             case 0:
@@ -246,6 +265,7 @@ public class Numeros {
                     } else {
                         System.out.print(" ");
                     }
+                    System.out.print(" ");
                 }
                 break;
         }
@@ -268,8 +288,9 @@ public class Numeros {
         digito1 = (numero / 10) % 10;
 
         for (int i = 0; i < altura; i++) {
-            Num1(digito1, i, altura);
-            Num2(digito2, i, altura);
+            Num1(digito1, altura , i );
+            System.out.print(" ");
+            Num2(digito2, altura , i );
             System.out.println();
         }
 
