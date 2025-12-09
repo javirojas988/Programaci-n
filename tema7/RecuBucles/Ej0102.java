@@ -1,4 +1,4 @@
-package tema7.RecuBucles;
+package RecuBucles;
 
 public class Ej0102 {
     public static void H(int altura, int i) {

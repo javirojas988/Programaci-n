@@ -1,4 +1,4 @@
-package tema7.RecuBucles;
+package RecuBucles;
 
 // numero impar generado aleatoriamente
 // HOLA , 

@@ -1,4 +1,4 @@
-package tema7.Ejercicio;
+package Ejercicio;
 
 public class T7ejer3 {
     

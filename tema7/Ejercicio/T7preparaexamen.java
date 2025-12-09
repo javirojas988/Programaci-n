@@ -1,4 +1,4 @@
-package tema7.Ejercicio;
+package Ejercicio;
 /*
 Se quiere crear un programa que nos permita representar gráficamente
 los dígitos que forman un cierto número. Dicho gráfico se podrá
@@ -16,7 +16,7 @@ public class T7preparaexamen {
         int numeroDigito = 0;
         try {
             numero = ((int) (Math.random() * (max - min + 1)) + min );  
-            /
+            
             while ( numero > 0) {
                 numero = numero/10 ;
                 numeroDigito++ ;

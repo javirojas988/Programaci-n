@@ -1,4 +1,4 @@
-package tema7.RecuBucles;
+package RecuBucles;
 
 // longitud carretera 
 // anchura es la misma 4 relleno 2 borde
@@ -8,6 +8,8 @@ package tema7.RecuBucles;
 // Switch cada cacho de acera con IZQ , DER , REC 
 // Math random en cada cacho 0/1 obstaculo 
 // Obstculo O / * , posicion 1/4
+
+//SIN TERMINAR ; LOSPAPUS.java ; terminado
 
 import java.util.Scanner;
 

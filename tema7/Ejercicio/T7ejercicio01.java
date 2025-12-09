@@ -1,4 +1,4 @@
-package tema7.Ejercicio;
+package Ejercicio;
 
 public class T7ejercicio01 {
     public static void piramide(int altura, int numero) {

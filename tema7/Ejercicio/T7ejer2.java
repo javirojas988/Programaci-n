@@ -1,4 +1,4 @@
-package tema7.Ejercicio; // piramides huecas 
+package Ejercicio; // piramides huecas 
 
 public class T7ejer2 {
     public static void piramide(int altura, int numero) {

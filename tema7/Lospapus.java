@@ -1,4 +1,3 @@
-package tema7;
 
 // longitud carretera 
 // anchura es la misma 4 relleno 2 borde
@@ -79,7 +78,7 @@ public class Lospapus {
                         for ( int j = 0 ; j <= 6 ; j++){
                             if ( j == 1 || j == 6 ){
                                 System.out.print("|");
-                            } else if ( j == posicionObstucalo) {
+                            } else if ( j == posicionObstucalo+1) {
                                 System.out.print("O");
                             } else {
                                 System.out.print(" ");
@@ -89,7 +88,7 @@ public class Lospapus {
                         for ( int j = 0 ; j <= 6 ; j++){
                             if ( j == 1 || j == 6 ){
                                 System.out.print("|");
-                            } else if ( j == posicionObstucalo) {
+                            } else if ( j == posicionObstucalo+1) {
                                 System.out.print("*");
                             } else {
                                 System.out.print(" ");
