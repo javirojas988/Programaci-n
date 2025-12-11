@@ -1,6 +1,6 @@
 package RecuBucles;
 import java.util.Scanner;
-public class EjRelojGpt {
+public class Parte1 {
     public static void Superior(boolean respuesta0 ){ ; System.out.print(( respuesta0 == true)?" *** " : "     "); }
     public static void SupIZq(boolean respuesta1 ) { ; System.out.print(( respuesta1 == true)?"*   " : "    "); }
     public static void SupDer(boolean respuesta2) { ; System.out.print(( respuesta2 == true)?"*" : " "); }
@@ -13,10 +13,8 @@ public class EjRelojGpt {
         Scanner sc = new Scanner(System.in);
         int digito = 5;
 
-        for ( int i = 0 ; i <= 7 ; i++) {
             switch (digito) {
                 case 1:
-
                     break; 
                 case 2 : 
                     break;
@@ -24,7 +22,24 @@ public class EjRelojGpt {
                     break;
                 case 4:
                     break;
-                case 5:
+                case 5: 
+                    Superior(true); // fila uno
+                    System.out.println();
+                    SupIZq(true);// fila 2
+                    SupDer(false);
+                    System.out.println();
+                    SupIZq(true);
+                    SupDer(false); // fila 3
+                    System.out.println(); 
+                    Centro(true); // fila  4
+                    System.out.println();
+                    InfIzq(false);
+                    InfDer(true); // fila  5
+                    System.out.println();
+                    InfIzq(false);
+                    InfDer(true); // fila  6                    
+                    System.out.println();
+                    Inferior(true); // fila  7
                     break;
                 case 6:
                     break;
@@ -36,13 +51,6 @@ public class EjRelojGpt {
                     break;
                 case 0:
                     break;
-            }
-            System.out.println();
-        }
-        
-
-        
-        
-        
+            }  
     }
 }
