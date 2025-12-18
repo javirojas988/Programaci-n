@@ -283,7 +283,7 @@ public class Numeros {
 
         System.out.print("introduce un número entero de dos cifras máximo; ");
         numero = sc.nextInt();
-        if (numero >= 100 || numero < 0) {
+        if (numero <= 100 || numero > 0) {
             digito2 = numero % 10;
             digito1 = (numero / 10) % 10;
 
