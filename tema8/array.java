@@ -12,8 +12,9 @@ public class array {
         int respuesta ; 
         float[] votos = { 1 , 2 , 67 , 56 ,54};
         try {
-            respuesta = sc.nextInt();
+            
             System.out.println("introduze num 1-5");
+            respuesta = sc.nextInt();
             System.out.println(votos[respuesta - 1]);
 
             
