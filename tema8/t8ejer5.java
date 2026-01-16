@@ -1,5 +1,3 @@
-package tema8;
-
 public class t8ejer5 {
     public static void leer(int[] n, int[] n2,int[] n3, int i , int numero){
         

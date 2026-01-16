@@ -2,7 +2,7 @@
 import java.util.Scanner;
 public class ejer6 {
     public static Scanner entrada = new Scanner(System.in);
-
+    public static final int tope=10 ; 
     public static void leer(int numeros[] , int tope){
         int respuesta ; 
         try {
@@ -40,14 +40,31 @@ public class ejer6 {
 
     public static void main(String[] args) {
         int[] numeros ; 
-        int tope; 
+         
         System.out.print("Cantidad números:");
-        tope = entrada.nextInt();
+        
         numeros = new int [tope] ; 
         
         leer(numeros , tope);
+        for(int j=0;j<tope;j++){
+            System.out.print(j+" | ");
+        }
+        System.out.println();
+        for(int j=0;j<tope;j++){
+            System.out.print("----");
+        }
+        System.out.println();
         printear(numeros , tope );
+        System.out.println("Array rotado a la derecha");
         rotar(numeros , tope);
+        for(int j=0;j<tope;j++){
+            System.out.print(j+" | ");
+        }
+        System.out.println();
+        for(int j=0;j<tope;j++){
+            System.out.print("----");
+        }
+        System.out.println();
         printear(numeros , tope );
 
         
