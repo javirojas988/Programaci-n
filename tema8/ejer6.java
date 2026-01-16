@@ -1,15 +1,55 @@
-package tema8;
+// numeros en array  y los roto 
 import java.util.Scanner;
 public class ejer6 {
-    public static void main(String[] args) {
-        int[] numero ; 
-        int respuesta ; 
-        Scanner sc = new Scanner(System.in );
-        numero = new int[15];
-        for(int i= 0 ; i < 20 ; i++ ){
-            respuesta = sc.nextInt() ; 
-            numero[i] = respuesta ;  
+    public static Scanner entrada = new Scanner(System.in);
 
+    public static void leer(int numeros[] , int tope){
+        int respuesta ; 
+        try {
+            System.out.println("introduce "+ tope +" números");
+            for(int i= 0 ; i < tope ; i++ ){
+                respuesta = entrada.nextInt();
+                numeros[i] = respuesta ; 
+            }
+            System.out.println();
+        } catch (ArrayIndexOutOfBoundsException ime ) {
+            System.out.println("introduce números validos");
         }
     }
-}
+
+    public static void rotar(int numeros[], int tope){
+        int auxiliar  ;
+        auxiliar = numeros[0] ;
+        for(int i = 0 ; i < tope ; i++){
+            if ( i != tope-1 ){
+                numeros[i] = numeros[i+1] ;
+            }
+            
+        }
+        numeros[tope-1] = auxiliar ; 
+        
+        
+    }
+
+    public static void printear(int numeros[], int tope){
+        for(int i= 0 ; i < tope ; i++ ){
+            System.out.print(numeros[i]+ " | ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] numeros ; 
+        int tope; 
+        System.out.print("Cantidad números:");
+        tope = entrada.nextInt();
+        numeros = new int [tope] ; 
+        
+        leer(numeros , tope);
+        printear(numeros , tope );
+        rotar(numeros , tope);
+        printear(numeros , tope );
+
+        
+    }
+} 
