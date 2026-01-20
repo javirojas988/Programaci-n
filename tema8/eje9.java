@@ -49,3 +49,4 @@ public class eje9 {
         }
     }
 }
+// CORREGUIR; tiene que ser un array en que yo mueva los pares  alante , con un axiliar solo
