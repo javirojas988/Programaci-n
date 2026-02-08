@@ -1,7 +1,6 @@
-package tema9.ej1; 
-import clases.Caballo; 
+// import gato no lo uso porque estan en el mismo paquete 
+
 public class main {
-    public static void main(String[] args) {
-        Caballo montañoso = new Caballo();
-    }
-}
+    Persona javi = new Persona("Checoeslovaco");
+    javi.saluda() ; //no va
+}   
