@@ -23,7 +23,7 @@ public class Persona {
         return nombre; 
     }
     public void setNombre(String nombre){ // colocar  
-        this.nombre = nombre; 
+        this.nombre = nombre;   
     }
     public String getNacionalidad(){
         return nacionalidad;
