@@ -1,8 +1,8 @@
 public class Animal {
     protected String raza ; 
-    protected String nombre ; 
+    protected String nombre ;  // puede se private
     
-    Animal(){
+    public Animal(){
 
     }
     public Animal(String nombre ){ // constructor 

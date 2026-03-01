@@ -1,10 +1,16 @@
 public class Gato extends Animal {
-    
-    Gato(){ // sirven 
+   
+
+    public Gato(){ // sirven 
         super();
     }
 
-    public Gato (String nombre){ // para conectar con gato
+    public Gato(String nombre){ // para conectar con gato
         super(nombre);          
     }
+
+     
+    // public Gato(String raza ){
+    //     super(raza) ; 
+    // }
 }
