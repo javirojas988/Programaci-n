@@ -105,7 +105,12 @@ public class App {
             System.out.print("Selecciona el equipo que quieras borrar: ");
             Scanner sc = new Scanner(System.in);
             decision = sc.nextInt();
+            //
+            String sqlVerifica = "SELECT "+ decision + " FROM equipo;";
+            Statment stmtVerifica = conexion.createStatement();
+            ResultSet resultado = stmtVerifica.executeQuery(sqlVerifica);
             // METER IF de chekear si codigo existe y hacerlo , con Select deberia poder
+            //if ( )
             String sql = "DELETE FROM equipo WHERE codigo=" + decision;
             Statement stmt = conexion.createStatement();
             stmt.execute(sql);
