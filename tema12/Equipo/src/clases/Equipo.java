@@ -14,4 +14,12 @@ public class Equipo {
         this.nombre = nombre ; 
         this.codigo = codigo ; 
     }
+
+    /**
+     */
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+    
 }
