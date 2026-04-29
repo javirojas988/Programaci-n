@@ -24,7 +24,7 @@ public class App {
             String sql = "SELECT * FROM libro ;";
             Statement stmt = conexion.createStatement() ; 
 
-            // EJECUTAMO CONSULT
+            // EJECUTAMO CONSULTa
             ResultSet resultado = stmt.executeQuery(sql) ;
 
             //Desplazamo el cursor al primer registro
