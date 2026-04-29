@@ -81,7 +81,7 @@ public class App {
         System.out.print("Opcion? ");
     }
 
-    // ==========
+    // ========== 1
     public static void listaEquipo(Connection conexion) {
         String nombre;
         int codigo;
@@ -106,6 +106,7 @@ public class App {
         }
     }
 
+    // CASO 5
     public static void borrarEquipo(Connection conexion) throws SQLException {
         int decision;
 
@@ -132,19 +133,27 @@ public class App {
 
     }
 
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
     // =================
-    // MIRARSELO
-    // =================
+    // MIRARSELO 
+    // ================= CASO 3
     public static void buscarEquipo(Connection conexion) {
-        int codigo;
         String nombre;
+         Scanner sc = new Scanner(System.in);
+
+    
         try {
-            // =
-            String sql = "SELECT * FROM libro WHERE codigo = ? ;";
+            //pido dato
+            System.out.print("Introduce el código del equipo: ");
+            int codigo1 = sc.nextInt();
+            // preparo consulta
+            String sql = "SELECT * FROM equipo WHERE codigo = ? ;";
             PreparedStatement stmt = conexion.prepareStatement(sql);
 
-            // remplaza interrogacion con el valor sql , 1 es la poscion de ?
-            stmt.setString(1, sql);
+            // remplaza interrogacion con el valor que queremo buscar , (1 es la poscion de ?)
+            stmt.setInt(1, codigo1);
 
             // lamzamos la consulta
             // la variable resultado; Utilizando resultado siempre tendra un objeto tipo
@@ -153,14 +162,15 @@ public class App {
             // -Tendra un objeto de tipo resultset si no encunetra el registro en el bd
             ResultSet resultado = stmt.executeQuery();
 
-            /*
-             * if ( resultado.next()){
-             * Public Equipo equipo throws SQLException{
-             * return new Equipo(resultado.getInt("codigo"),
-             * resultado.getString("nombre"));
-             * }
-             * }
-             */
+            /// si hay fila, hay resultado. Como ponemos un unique en la lupa , pues ese es broder
+          if (resultado.next()) {
+                // Encontró el equipo → leemos los campos
+                System.out.println("Código: " + resultado.getInt("codigo"));
+                System.out.println("Nombre: " + resultado.getString("nombre"));
+            } else {
+                // No encontró ningún equipo con ese código
+                System.out.println("No existe ningún equipo con ese código.");
+            }
 
         } catch (Exception e) {
             System.out.println("error ");
@@ -170,26 +180,30 @@ public class App {
 
     // =================
     // MIRARSELA
-    // =================
+    // ================= CASO 4
     public static void editarEquipo(Connection conexion) throws SQLException {
 
         int cod;
         String nombre;
         System.out.print("Introduce Codigo del equipo a editar");
         cod = Integer.parseInt(System.console().readLine());
-        System.out.println(
-                "Ahora mete el nombre que quieras poner (deja este apartado en blanco para no realizar modificaciones");
+
+        System.out.println("Ahora mete el nombre que quieras poner (deja este apartado en blanco para no realizar modificaciones");
         nombre = System.console().readLine();
 
         // constuir SQL
         String sql = "UPDATE equipo SET ";
         if (!nombre.isEmpty()) {
-            sql += "titulo = ? ;";
+            sql += "nombre = ? WHERE codigo = ? ;";
         }
 
         PreparedStatement stmt = conexion.prepareStatement(sql);
-        int equipoActu = stmt.executeUpdate();
+        
+        stmt.setString(1, nombre);
+        stmt.setInt(2, cod);
 
+        int equipoActu = stmt.executeUpdate();
+        
         if (equipoActu == 0) {
             System.out.println("No se a encontra el equipo con ese código");
         } else {
@@ -198,7 +212,7 @@ public class App {
     }
 
     /**
-     *  
+     *  CASO 2 
      */
     public static void aniadirEquipo(Connection conexion) throws SQLException {
         String nombre;
